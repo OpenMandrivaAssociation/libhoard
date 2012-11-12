@@ -1,0 +1,11 @@
+--- src/Makefile	2012-06-12 05:53:26.000000000 +0200
++++ src/Makefile.oden	2012-09-25 09:54:42.831043384 +0200
+@@ -79,7 +79,7 @@
+ 
+ SOLARIS_GCC_SPARC_COMPILE_DEBUG = g++ -nostartfiles -pipe -mcpu=ultrasparc -g -fPIC $(INCLUDES) -D_REENTRANT=1 -shared $(GNU_SRC) -lthread -lpthread -ldl -o libhoard.so
+ 
+-GENERIC_GCC_COMPILE = g++ -I/usr/include/nptl -pipe -O3 -finline-limit=20000 -finline-functions  -DNDEBUG  $(INCLUDES) -D_REENTRANT=1 -shared $(GNU_SRC) -Bsymbolic -o libhoard.so -ldl -lpthread
++GENERIC_GCC_COMPILE = g++ -I/usr/include/nptl -pipe -O3 -finline-limit=20000 -finline-functions  -DNDEBUG  $(INCLUDES) -D_REENTRANT=1 -shared -Wl,-soname=libhoard.so.0 $(GNU_SRC) -Bsymbolic -o libhoard.so.0 -ldl -lpthread
+ 
+ 
+ windows: libhoard.dll
