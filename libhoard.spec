@@ -8,7 +8,7 @@ Version:	3.9.0
 Release:	%mkrel 1
 Group:		System/Libraries
 License:	GPLv2+
-URL:		http://www.hoard.org/
+URL:		https://www.hoard.org/
 Source0:	http://www.cs.umass.edu/~emery/hoard/hoard-%{version}/libhoard-3.9.tar.gz
 Patch0:		libhoard-3.9-glibc-2.14+fix.diff
 Patch1:		libhoard-3.9-soname.diff
